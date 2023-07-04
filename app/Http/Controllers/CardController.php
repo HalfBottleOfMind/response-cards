@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enum\CardType;
 use App\Models\Card;
 
 class CardController extends Controller
@@ -11,7 +12,7 @@ class CardController extends Controller
         $query = Card::query();
 
         if ($type = request()->get('type')) {
-            $query->type($type);
+            $query->type(CardType::from($type));
         }
 
         if ($cost = request()->get('cost')) {
