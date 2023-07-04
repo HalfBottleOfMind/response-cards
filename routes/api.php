@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/foo', function () {
 	return response()->json(['bar']);
 });
+
+Route::get('/cards', [\App\Http\Controllers\CardController::class, 'index']);
