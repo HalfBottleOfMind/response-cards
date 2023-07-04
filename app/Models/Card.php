@@ -27,16 +27,16 @@ class Card extends Model
 
     public function scopeColor(Builder $builder, string $color): void
     {
-        $builder->whereJsonContains('data->color', $color);
+        $builder->whereJsonContains('colors', $color);
     }
 
     public function scopeCost(Builder $builder, int $cost): void
     {
-        $builder->where('data->cost', $cost);
+        $builder->where('cost', $cost);
     }
 
     public function scopeKeywords(Builder $builder, string|array $keywords): void
     {
-        $builder->whereJsonContains('data->keywords', $keywords);
+        $builder->whereJsonContains('keywords', $keywords);
     }
 }
