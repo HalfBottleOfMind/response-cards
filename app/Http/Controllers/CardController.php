@@ -27,5 +27,7 @@ class CardController extends Controller
         if ($keywords = request()->get('keywords')) {
             $query->keywords($keywords);
         }
+
+        return $query->orderBy('id')->get();
     }
 }
