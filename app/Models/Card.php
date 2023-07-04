@@ -15,6 +15,11 @@ class Card extends Model
         'type' => CardType::class,
     ];
 
+    public function scopeSet(Builder $builder, string $set): void
+    {
+        $builder->whereSet($set);
+    }
+
     public function scopeType(Builder $builder, CardType $type): void
     {
         $builder->whereType($type);

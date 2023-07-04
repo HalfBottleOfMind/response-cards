@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
+            $table->string('set');
+            $table->unsignedInteger('number');
             $table->string('type');
 			$table->string('name');
 			$table->jsonb('data');
