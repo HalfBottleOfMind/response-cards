@@ -30,7 +30,7 @@ class Card extends Model
         $builder->where('data->cost', $cost);
     }
 
-    public function scopeKeyword(Builder $builder, array $keywords): void
+    public function scopeKeywords(Builder $builder, string|array $keywords): void
     {
         $builder->whereJsonContains('data->keywords', $keywords);
     }
