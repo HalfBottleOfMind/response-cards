@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('type');
 			$table->string('name');
             $table->unsignedTinyInteger('cost');
+            $table->unsignedTinyInteger('power');
             $table->jsonb('colors');
 			$table->jsonb('keywords');
         });
