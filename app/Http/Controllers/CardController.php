@@ -19,6 +19,10 @@ class CardController extends Controller
             $query->cost($cost);
         }
 
+        if ($power = request()->get('power')) {
+            $query->power($power);
+        }
+
         if ($color = request()->get('color')) {
             $query->color($color);
         }
